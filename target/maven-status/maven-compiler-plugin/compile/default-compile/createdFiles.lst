@@ -1,4 +1,14 @@
+idd\rechercheIndus\application\entity\UserAuth.class
 idd\rechercheIndus\application\controller\IndexController.class
+idd\rechercheIndus\application\service\UserInfoService.class
+idd\rechercheIndus\application\repository\UserInfoRepository.class
 idd\rechercheIndus\application\config\WebConfig.class
+idd\rechercheIndus\application\controller\UserInfoController.class
+idd\rechercheIndus\application\exception\InvalidDataException.class
+idd\rechercheIndus\application\exception\UserInfoNotFoundException.class
+idd\rechercheIndus\application\entity\UserInfo.class
+idd\rechercheIndus\application\service\MailService.class
 idd\rechercheIndus\application\MainApplication.class
+idd\rechercheIndus\application\repository\UserAuthRepository.class
 idd\rechercheIndus\application\controller\HomeController.class
+idd\rechercheIndus\application\service\UserAuthService.class

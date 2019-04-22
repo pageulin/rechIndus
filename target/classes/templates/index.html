@@ -19,7 +19,7 @@
     <!-- Bootstrap core JavaScript -->
   <script th:src="@{/assets/js/vendor/jquery/jquery.min.js}"></script>
   <script th:src="@{/assets/js/vendor/bootstrap/bootstrap.bundle.min.js}"></script>
-
+  <script th:src="@{/assets/js/scripts.js}"></script>
 </head>
 
 <body>
@@ -80,8 +80,25 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
     </div>
   </section>
-  
-<!--   <section class="py-5"> -->
+
+	<form id="contactForm">
+		<div class="form-group">
+			<label for="exampleInputEmail1">Email address</label> <input
+				type="email" class="form-control" id="exampleInputEmail1"
+				aria-describedby="emailHelp" placeholder="Enter email"  name="mail"> <small
+				id="emailHelp" class="form-text text-muted">We'll never
+				share your email with anyone else.</small>
+		</div>
+
+		<div class="form-check">
+			<input type="checkbox" class="form-check-input" id="exampleCheck1">
+			<label class="form-check-label" for="exampleCheck1">Check me
+				out</label>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+
+	<!--   <section class="py-5"> -->
   
 <!--   	<div class="container"> -->
 <!--   		<h1>Test 2</h1> -->

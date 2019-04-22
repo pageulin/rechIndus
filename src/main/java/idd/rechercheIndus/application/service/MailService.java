@@ -28,7 +28,7 @@ public class MailService {
 		helper.setTo(recipient);
 		helper.setSubject(subject);
 		helper.addInline("img01", new ClassPathResource("templates/mail/images/img-01.jpg"), "image/jpg");
-		helper.setFrom("recherche-industrielle@noreply.com");
+		helper.setFrom("recherche-industrielle@yopmail.com");
 		mailSender.send(mimeMessage);
 		return message;
 	}

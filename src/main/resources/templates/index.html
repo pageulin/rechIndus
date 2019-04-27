@@ -1,118 +1,259 @@
 <!DOCTYPE html>
-<html  xmlns:th="http://www.thymeleaf.org" lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
 
-  <title>Full Width Pics - Start Bootstrap Template</title>
+<title>Recherche industrielle</title>
 
-  <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" type="text/css" th:href="@{/assets/css/vendor/bootstrap/bootstrap.min.css}" />
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/vendor/bootstrap/mdbootstrap.min.css}" />
 
-  <!-- Custom styles for this template -->
-  <link rel="stylesheet" type="text/css" th:href="@{/assets/css/full-width-pics.css}" />
-  
-    <!-- Bootstrap core JavaScript -->
-  <script th:src="@{/assets/js/vendor/jquery/jquery.min.js}"></script>
-  <script th:src="@{/assets/js/vendor/bootstrap/bootstrap.bundle.min.js}"></script>
-  <script th:src="@{/assets/js/scripts.js}"></script>
+<!-- Custom styles for this template -->
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/styles.css}" />
+
+<!-- Bootstrap core JavaScript -->
+<script th:src="@{/assets/js/vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{/assets/js/vendor/bootstrap/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/assets/js/scripts.js}"></script>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-      <a class="navbar-brand" href="#">Recherche Industrielle</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Services</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- Header - set the background image for the header in the line below -->
-  <header class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1076');">
-    <img class="img-fluid d-block mx-auto" src="http://placehold.it/200x200&text=Logo" alt="">
-  </header>
-
-  <!-- Content section -->
-  <section class="py-5">
-    <div class="container">
-      <h1>Section Heading</h1>
-      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, suscipit, rerum quos facilis repellat architecto commodi officia atque nemo facere eum non illo voluptatem quae delectus odit vel itaque amet.</p>
-    </div>
-  </section>
-
-  <!-- Image Section - set the background image for the header in the line below -->
-  <section class="py-5 bg-image-full" style="background-image: url('https://unsplash.it/1900/1080?image=1081');">
-    <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
-    <div style="height: 200px;"></div>
-  </section>
-
-  <!-- Content section -->
-  <section class="py-5">
-    <div class="container">
-      <h1>Contactez-nous !</h1>
-      <p class="lead">Pour en savoir plus sur cette expérience, vous pouvez nous contacter par le formulaire ci-après</p>
-	    <form id="contactForm">
-			<div class="form-group">
-				<label for="exampleInputEmail1">Email address</label> <input
-					type="email" class="form-control" id="exampleInputEmail1"
-					aria-describedby="emailHelp" placeholder="Votre adresse mail"  name="mail"> <small
-					id="emailHelp" class="form-text text-muted">Nous ne communiquerons votre adresse email à personne.</small>
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		<div class="container">
+			<a class="navbar-brand" href="#">Recherche Industrielle</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarResponsive" aria-controls="navbarResponsive"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active"><a class="nav-link" href="#home">Home
+							<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="#project">Le
+							projet</a></li>
+					<li class="nav-item"><a class="nav-link" href="#aboutus">Qui
+							sommes nous ?</a></li>
+					<li class="nav-item"><a class="nav-link" href="#contact">Nous
+							contacter</a></li>
+				</ul>
 			</div>
-	
-			<div class="form-group">
-				<label for="inputCompany">Entreprise</label> <input
-					type="text" class="form-control" id="inputCompany"
-					aria-describedby="helpCompany" placeholder="Votre Entreprise"  name="company"> <small
-					id="helpCompany" class="form-text text-muted">Indiquez votre entreprise si elle vous souhaitez demander des renseignements en son nom.</small>
+		</div>
+	</nav>
+
+	<!-- Header - set the background image for the header in the line below -->
+	<header id="home">
+		<div class="overlay"></div>
+		<video playsinline="playsinline" autoplay="autoplay" muted="muted"
+			loop="loop">
+			<source
+				src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4"
+				type="video/mp4">
+		</video>
+		<div class="container h-100">
+			<div class="d-flex h-100 text-center align-items-center">
+				<div class="w-100 text-white">
+					<h1 class="display-3">Recherche Industrielle</h1>
+					<p class="lead mb-0">Nous préparons le monde de demain</p>
+				</div>
 			</div>
-			
-			
-			<button type="submit" class="btn btn-primary">Submit</button>
-		</form>
-	</div>
-  </section>
+		</div>
+	</header>
 
-	<!--   <section class="py-5"> -->
-  
-<!--   	<div class="container"> -->
-<!--   		<h1>Test 2</h1> -->
-<!--   	</div> -->
-  
-<!--   </section> -->
 
-  <!-- Footer -->
-  <footer class="py-5 bg-dark">
-    <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
-    </div>
-    <!-- /.container -->
-  </footer>
+	<!-- Content section -->
+	<section id="project" class="py-5">
+		<div class="container">
+			<h1>Rouler pour dépolluer !</h1>
+			<p class="lead">La fin des moteurs thermiques pollueurs</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Aliquid, suscipit, rerum quos facilis repellat architecto commodi
+				officia atque nemo facere eum non illo voluptatem quae delectus odit
+				vel itaque amet.</p>
+		</div>
+	</section>
+
+	<!-- Image Section - set the background image for the header in the line below -->
+	<section id="aboutus" class="py-5">
+		<div class="container">
+
+			<section>
+				<!--Carousel Wrapper-->
+				<div id="video-carousel-example2"
+					class="carousel slide carousel-fade" data-ride="carousel">
+					<!--Indicators-->
+					<ol class="carousel-indicators">
+						<li data-target="#video-carousel-example2" data-slide-to="0"
+							class="active"></li>
+						<li data-target="#video-carousel-example2" data-slide-to="1"></li>
+						<li data-target="#video-carousel-example2" data-slide-to="2"></li>
+					</ol>
+					<!--/.Indicators-->
+					<!--Slides-->
+					<div class="carousel-inner" role="listbox">
+						<!-- First slide -->
+						<div class="carousel-item active">
+							<!--Mask color-->
+							<div class="view">
+								<!--Video source-->
+								<video controls class="video-fluid">
+									<source src="https://mdbootstrap.com/img/video/Tropical.mp4"
+										type="video/mp4" />
+								</video>
+								<div class="mask rgba-purple-slight"></div>
+							</div>
+
+							<!--Caption-->
+							<div class="carousel-caption">
+								<div class="animated fadeInDown">
+									<h3 class="h3-responsive">Description</h3>
+								</div>
+							</div>
+							<!--Caption-->
+						</div>
+						<!-- /.First slide -->
+
+						<!-- Second slide -->
+						<div class="carousel-item">
+							<!--Mask color-->
+							<div class="view">
+								<!--Video source-->
+								<video controls class="video-fluid">
+									<source src="https://mdbootstrap.com/img/video/forest.mp4"
+										type="video/mp4" />
+								</video>
+								<div class="mask rgba-purple-slight"></div>
+							</div>
+
+							<!--Caption-->
+							<div class="carousel-caption">
+								<div class="animated fadeInDown">
+									<h3 class="h3-responsive">Description</h3>
+								</div>
+							</div>
+							<!--Caption-->
+						</div>
+						<!-- /.Second slide -->
+
+						<!-- Third slide -->
+						<div class="carousel-item">
+							<!--Mask color-->
+							<div class="view">
+								<!--Video source-->
+								<video controls class="video-fluid">
+									<source
+										src="https://mdbootstrap.com/img/video/Agua-natural.mp4"
+										type="video/mp4" />
+								</video>
+								<div class="mask rgba-purple-slight"></div>
+							</div>
+
+							<!--Caption-->
+							<div class="carousel-caption">
+								<div class="animated fadeInDown">
+									<h3 class="h3-responsive">Description</h3>
+								</div>
+							</div>
+							<!--Caption-->
+						</div>
+						<!-- /.Third slide -->
+					</div>
+					<!--/.Slides-->
+					<!--Controls-->
+					<a class="carousel-control-prev" href="#video-carousel-example2"
+						role="button" data-slide="prev"> <span
+						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+						class="sr-only">Previous</span>
+					</a> <a class="carousel-control-next" href="#video-carousel-example2"
+						role="button" data-slide="next"> <span
+						class="carousel-control-next-icon" aria-hidden="true"></span> <span
+						class="sr-only">Next</span>
+					</a>
+					<!--/.Controls-->
+				</div>
+			</section>
+		</div>
+		<!--Carousel Wrapper-->
+	</section>
+
+	<!-- Content section -->
+	<section id="contact" class="py-5">
+
+		<div class="container">
+			<nav class="nav nav-tabs">
+				<a class="nav-item nav-link active" href="#p1" data-toggle="tab">Nous contacter
+				</a> <a class="nav-item nav-link" href="#p2" data-toggle="tab">Déjà entré en contact ?
+					</a>
+			</nav>
+			<div class="tab-content">
+				<div class="tab-pane active" id="p1">
+					<h1>Contactez-nous !</h1>
+					<p class="lead">Pour en savoir plus sur cette expérience, vous
+						pouvez nous contacter par le formulaire ci-après</p>
+					<form id="contactForm">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Email address</label> <input
+								type="email" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="Votre adresse mail"
+								name="mail"> <small id="emailHelp"
+								class="form-text text-muted">Nous ne communiquerons
+								votre adresse email à personne.</small>
+						</div>
+
+						<div class="form-group">
+							<label for="inputCompany">Entreprise</label> <input type="text"
+								class="form-control" id="inputCompany"
+								aria-describedby="helpCompany" placeholder="Votre Entreprise"
+								name="company"> <small id="helpCompany"
+								class="form-text text-muted">Indiquez votre entreprise
+								si elle vous souhaitez demander des renseignements en son nom.</small>
+						</div>
+
+
+						<button type="submit" class="btn btn-primary">Ok</button>
+					</form>
+
+				</div>
+
+				<div class="tab-pane" id="p2">
+					<h1>Renseignez votre adresse validée</h1>
+					<form id="authentForm">
+						<div class="form-group">
+							<label for="exampleInputEmail1">Adresse Email</label> <input
+								type="email" class="form-control" id="exampleInputEmail1"
+								aria-describedby="emailHelp" placeholder="Votre adresse mail"
+								name="mail"> <small id="emailHelp"
+								class="form-text text-muted">Nous ne communiquerons
+								votre adresse email à personne.</small>
+						</div>
+
+						<button type="submit" class="btn btn-primary">Ok</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy;
+				recherche-industrielle.com 2019</p>
+		</div>
+		<!-- /.container -->
+	</footer>
 
 </body>
 

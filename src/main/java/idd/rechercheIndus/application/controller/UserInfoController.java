@@ -12,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import idd.rechercheIndus.application.entity.UserInfo;
 import idd.rechercheIndus.application.exception.InvalidDataException;
 import idd.rechercheIndus.application.exception.UserInfoNotFoundException;
-import idd.rechercheIndus.application.service.MailService;
+import idd.rechercheIndus.application.service.NotificationMailBuilderService;
+import idd.rechercheIndus.application.service.SendGridMailSenderService;
 import idd.rechercheIndus.application.service.UserInfoService;
 import javassist.NotFoundException;
 
@@ -21,9 +22,10 @@ public class UserInfoController {
 
 	@Autowired
 	private UserInfoService userInfoService;
-	
 	@Autowired
-	private MailService mailService;
+	private SendGridMailSenderService mailService;
+	@Autowired
+	private NotificationMailBuilderService mailBuilderService;
 	
 	@PostMapping("/login")
 	public UserInfo login(@RequestBody UserInfo userInfo) throws NotFoundException {
@@ -56,7 +58,7 @@ public class UserInfoController {
 		
 		UserInfo newUserInfo = userInfoService.save(userInfo);
 		if(newUserInfo != null) {
-			mailService.sendMail("test", "subject", newUserInfo.getMail());
+			mailService.sendMail(mailBuilderService.buildSignupMail(newUserInfo.getMail()));
 			return newUserInfo;
 		}
 		else {

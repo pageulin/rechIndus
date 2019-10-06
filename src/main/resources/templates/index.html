@@ -9,7 +9,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>Recherche industrielle</title>
+<title>C.I.A</title>
 
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" type="text/css"
@@ -18,7 +18,6 @@
 <!-- Custom styles for this template -->
 <link rel="stylesheet" type="text/css"
 	th:href="@{/assets/css/styles.css}" />
-
 <!-- Bootstrap core JavaScript -->
 <script th:src="@{/assets/js/vendor/jquery/jquery.min.js}"></script>
 <script th:src="@{/assets/js/vendor/bootstrap/bootstrap.bundle.min.js}"></script>
@@ -30,7 +29,7 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="#">Recherche Industrielle</a>
+			<a class="navbar-brand" href="#">C.I.A</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive" aria-controls="navbarResponsive"
 				aria-expanded="false" aria-label="Toggle navigation">
@@ -53,19 +52,13 @@
 	</nav>
 
 	<!-- Header - set the background image for the header in the line below -->
-	<header id="home">
+	<header id="home" class="py-5 bg-image-full" th:style="'background-image: url(/assets/img/green-home-2.jpg);height:95vh'">
 		<div class="overlay"></div>
-		<video playsinline="playsinline" autoplay="autoplay" muted="muted"
-			loop="loop">
-			<source
-				src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4"
-				type="video/mp4">
-		</video>
 		<div class="container h-100">
 			<div class="d-flex h-100 text-center align-items-center">
 				<div class="w-100 text-white">
-					<h1 class="display-3">Recherche Industrielle</h1>
-					<p class="lead mb-0">Nous préparons le monde de demain</p>
+					<h1 class="display-3">C.I.A</h1>
+					<p class="lead mb-0">Préparons demain dès aujourd'hui !</p>
 				</div>
 			</div>
 		</div>
@@ -74,8 +67,8 @@
 
 	<!-- Content section -->
 	<section id="project" class="py-5">
-		<div class="container">
-			<h1>Rouler pour dépolluer !</h1>
+		<div class="container"> 
+			<h1 style="display:inline-block">Rouler pour dépolluer !</h1>
 			<p class="lead">La fin des moteurs thermiques pollueurs</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 				Aliquid, suscipit, rerum quos facilis repellat architecto commodi
@@ -104,16 +97,14 @@
 					<div class="carousel-inner" role="listbox">
 						<!-- First slide -->
 						<div class="carousel-item active">
-							<!--Mask color-->
-							<div class="view">
-								<!--Video source-->
-								<video controls class="video-fluid">
-									<source src="https://www.dropbox.com/s/507q1say8xvrbhh/1%20ER%20SANS%20ERREUR.avi?dl=0"
-										type="video/mp4" />
-								</video>
-								<div class="mask rgba-purple-slight"></div>
-							</div>
 
+							<div class="embed-responsive embed-responsive-16by9">
+								<!--Video source-->
+								<iframe width="560" height="315"
+									src="https://www.youtube.com/embed/9qGtgqqDrHQ" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe>
+							</div>
 							<!--Caption-->
 							<div class="carousel-caption">
 								<div class="animated fadeInDown">
@@ -127,14 +118,14 @@
 						<!-- Second slide -->
 						<div class="carousel-item">
 							<!--Mask color-->
-							<div class="view">
-								<!--Video source-->
-								<video controls class="video-fluid">
-									<source src="https://mdbootstrap.com/img/video/forest.mp4"
-										type="video/mp4" />
-								</video>
-								<div class="mask rgba-purple-slight"></div>
+
+							<div class="embed-responsive embed-responsive-16by9">
+								<iframe width="560" height="315"
+									src="https://www.youtube.com/embed/W4H--gs_bBo" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe>
 							</div>
+
 
 							<!--Caption-->
 							<div class="carousel-caption">
@@ -149,14 +140,12 @@
 						<!-- Third slide -->
 						<div class="carousel-item">
 							<!--Mask color-->
-							<div class="view">
+							<div class="embed-responsive embed-responsive-16by9">
 								<!--Video source-->
-								<video controls class="video-fluid">
-									<source
-										src="https://mdbootstrap.com/img/video/Agua-natural.mp4"
-										type="video/mp4" />
-								</video>
-								<div class="mask rgba-purple-slight"></div>
+								<iframe width="560" height="315"
+									src="https://www.youtube.com/embed/Eo-_l6DR4SY" frameborder="0"
+									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+									allowfullscreen></iframe>
 							</div>
 
 							<!--Caption-->
@@ -192,9 +181,9 @@
 
 		<div class="container">
 			<nav class="nav nav-tabs">
-				<a class="nav-item nav-link active" href="#p1" data-toggle="tab">Nous contacter
-				</a> <a class="nav-item nav-link" href="#p2" data-toggle="tab">Déjà entré en contact ?
-					</a>
+				<a class="nav-item nav-link active" href="#p1" data-toggle="tab">Nous
+					contacter </a> <a class="nav-item nav-link" href="#p2"
+					data-toggle="tab">Déjà entré en contact ? </a>
 			</nav>
 			<div class="tab-content">
 				<div class="tab-pane active" id="p1">
@@ -250,7 +239,7 @@
 	<footer class="py-5 bg-dark">
 		<div class="container">
 			<p class="m-0 text-center text-white">Copyright &copy;
-				recherche-industrielle.com 2019</p>
+				CIA 2019</p>
 		</div>
 		<!-- /.container -->
 	</footer>

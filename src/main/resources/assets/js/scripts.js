@@ -62,12 +62,15 @@ $(document).ready(function(event) {
 	});
 	
 	$(".carousel-item").click(function(event) {
+		console.log("click carousel")
 		var video = $(this).find("video")[0];
-		if(!video.playing) {
-			video.play();
-		}
-		else {
-			video.pause();
+		if(video) {
+			if(!video.playing) {
+				video.play();
+			}
+			else {
+				video.pause();
+			}
 		}
 	});
 	

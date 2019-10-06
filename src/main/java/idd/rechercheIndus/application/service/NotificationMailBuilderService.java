@@ -11,6 +11,7 @@ import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
 import idd.rechercheIndus.application.entity.Mail;
+import idd.rechercheIndus.application.entity.UserInfo;
 
 @Service
 public class NotificationMailBuilderService {
@@ -39,9 +40,13 @@ public class NotificationMailBuilderService {
 		
 	}
 	
-	public Mail buildSignupMailAdmin() {
+	public Mail buildSignupMailAdmin(UserInfo userInfo) {
 		Mail mail = new Mail();
-		mail.setMessage(templateEngine.process("mail/template.html", new Context()));
+		Context ctx = new Context();
+		ctx.setVariable("mail", userInfo.getMail());
+		ctx.setVariable("company", userInfo.getCompany());
+		ctx.setVariable("questions", userInfo.getQuestions());
+		mail.setMessage(templateEngine.process("mail/templateAdmin.html", ctx));
 		mail.setRecipient(adminAddress);
 		mail.setSubject(signupSubject);
 		mail.setSender(sender);

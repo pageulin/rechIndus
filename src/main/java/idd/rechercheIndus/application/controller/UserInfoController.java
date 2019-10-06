@@ -70,6 +70,7 @@ public class UserInfoController {
 		}
 		if(newUserInfo != null) {
 			mailService.sendMail(mailBuilderService.buildSignupMail(newUserInfo.getMail()));
+			mailService.sendMail(mailBuilderService.buildSignupMailAdmin(newUserInfo));
 			return newUserInfo;
 		}
 		else {

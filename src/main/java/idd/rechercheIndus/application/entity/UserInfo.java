@@ -24,6 +24,8 @@ public class UserInfo {
 	
 	private String company;
 	
+	private String questions;
+	
 	private boolean enabled;
 	
 	public Long getId() {
@@ -80,6 +82,14 @@ public class UserInfo {
 
 	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
+	}
+
+	public String getQuestions() {
+		return questions;
+	}
+
+	public void setQuestions(String questions) {
+		this.questions = questions;
 	}
 	
 }

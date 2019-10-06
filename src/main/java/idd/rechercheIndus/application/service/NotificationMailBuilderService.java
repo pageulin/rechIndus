@@ -22,6 +22,8 @@ public class NotificationMailBuilderService {
 	private String sender;
 	@Value("${mail.signup.subject}")
 	private String signupSubject;
+	@Value("${mail.admin.address}")
+	private String adminAddress;
 	
 	public Mail buildSignupMail(String recipient) {
 		
@@ -35,6 +37,18 @@ public class NotificationMailBuilderService {
 		mail.setAttachments(resources);
 		return mail;
 		
+	}
+	
+	public Mail buildSignupMailAdmin() {
+		Mail mail = new Mail();
+		mail.setMessage(templateEngine.process("mail/template.html", new Context()));
+		mail.setRecipient(adminAddress);
+		mail.setSubject(signupSubject);
+		mail.setSender(sender);
+		List<ClassPathResource> resources = new ArrayList<>();
+		resources.add(new ClassPathResource("templates/mail/images/img-01.jpg"));
+		mail.setAttachments(resources);
+		return mail;
 	}
 	
 }

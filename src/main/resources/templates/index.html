@@ -29,7 +29,7 @@
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="#">C.I.A</a>
+			<a class="navbar-brand" href="#">C.I.A </a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse"
 				data-target="#navbarResponsive" aria-controls="navbarResponsive"
 				aria-expanded="false" aria-label="Toggle navigation">
@@ -69,6 +69,7 @@
 	<section id="project" class="py-5">
 		<div class="container"> 
 			<h1 style="display:inline-block">Rouler pour dépolluer !</h1>
+			   <p th:text="${toto}">Test</p>
 			<p class="lead">La fin des moteurs thermiques pollueurs</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 				Aliquid, suscipit, rerum quos facilis repellat architecto commodi
@@ -84,7 +85,7 @@
 			<section>
 				<!--Carousel Wrapper-->
 				<div id="video-carousel-example2"
-					class="carousel slide carousel-fade" data-ride="carousel">
+					class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
 					<!--Indicators-->
 					<ol class="carousel-indicators">
 						<li data-target="#video-carousel-example2" data-slide-to="0"
@@ -180,58 +181,39 @@
 	<section id="contact" class="py-5">
 
 		<div class="container">
-			<nav class="nav nav-tabs">
-				<a class="nav-item nav-link active" href="#p1" data-toggle="tab">Nous
-					contacter </a> <a class="nav-item nav-link" href="#p2"
-					data-toggle="tab">Déjà entré en contact ? </a>
-			</nav>
-			<div class="tab-content">
-				<div class="tab-pane active" id="p1">
-					<h1>Contactez-nous !</h1>
-					<p class="lead">Pour en savoir plus sur cette expérience, vous
-						pouvez nous contacter par le formulaire ci-après</p>
-					<form id="contactForm">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Email address</label> <input
-								type="email" class="form-control" id="exampleInputEmail1"
-								aria-describedby="emailHelp" placeholder="Votre adresse mail"
-								name="mail"> <small id="emailHelp"
-								class="form-text text-muted">Nous ne communiquerons
-								votre adresse email à personne.</small>
-						</div>
-
-						<div class="form-group">
-							<label for="inputCompany">Entreprise</label> <input type="text"
-								class="form-control" id="inputCompany"
-								aria-describedby="helpCompany" placeholder="Votre Entreprise"
-								name="company"> <small id="helpCompany"
-								class="form-text text-muted">Indiquez votre entreprise
-								si elle vous souhaitez demander des renseignements en son nom.</small>
-						</div>
-
-
-						<button type="submit" class="btn btn-primary">Ok</button>
-					</form>
-
+			<h1>Contactez-nous !</h1>
+			<p class="lead">Pour en savoir plus sur cette expérience, vous
+				pouvez nous contacter par le formulaire ci-après</p>
+			<form id="contactForm">
+				<div class="form-group">
+					<label for="inputEmail">Email address</label> <input type="email"
+						class="form-control" id="inputEmail" aria-describedby="emailHelp"
+						placeholder="Votre adresse mail" name="mail"> <small
+						id="emailHelp" class="form-text text-muted">Nous ne
+						communiquerons votre adresse email à personne.</small>
 				</div>
 
-				<div class="tab-pane" id="p2">
-					<h1>Renseignez votre adresse validée</h1>
-					<form id="authentForm">
-						<div class="form-group">
-							<label for="exampleInputEmail1">Adresse Email</label> <input
-								type="email" class="form-control" id="exampleInputEmail1"
-								aria-describedby="emailHelp" placeholder="Votre adresse mail"
-								name="mail"> <small id="emailHelp"
-								class="form-text text-muted">Nous ne communiquerons
-								votre adresse email à personne.</small>
-						</div>
-
-						<button type="submit" class="btn btn-primary">Ok</button>
-					</form>
-
+				<div class="form-group">
+					<label for="inputCompany">Entreprise</label> <input type="text"
+						class="form-control" id="inputCompany"
+						aria-describedby="helpCompany" placeholder="Votre Entreprise"
+						name="company"> <small id="helpCompany"
+						class="form-text text-muted">Indiquez votre entreprise si
+						vous souhaitez demander des renseignements en son nom.</small>
 				</div>
-			</div>
+
+				<div class="form-group">
+					<label for="inputQuestions">Vos interrogations ?</label>
+					<textarea class="form-control" id="inputQuestions" rows="3"
+						aria-describedby="inputQuestionsHelp"
+						placeholder="N'hésitez pas à poser vos questions ou à faire part de vos remarques... "
+						name="questions" required> </textarea>
+					<small id="inputQuestionsHelp" class="form-text text-muted">Dites
+						nous ce que vous souhaitez savoir.</small>
+				</div>
+		<button type="submit" class="btn btn-primary">Ok</button>
+			</form>
+
 		</div>
 	</section>
 

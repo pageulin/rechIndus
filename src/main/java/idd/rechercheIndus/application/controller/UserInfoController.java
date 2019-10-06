@@ -55,8 +55,19 @@ public class UserInfoController {
 		if(userInfo == null) {
 			throw new InvalidDataException("");
 		}
-		
-		UserInfo newUserInfo = userInfoService.save(userInfo);
+		if(userInfo.getMail() == null || userInfo.getMail().isEmpty()) {
+			throw new InvalidDataException("L'adresse mail est obligatoire");
+		}
+		Optional<UserInfo> userInfoOpt = userInfoService.findUserByMail(userInfo.getMail());
+		UserInfo newUserInfo = null;
+		if(userInfoOpt.isPresent()) {
+			UserInfo existingUserInfo = userInfoOpt.get();
+			existingUserInfo.setQuestions(existingUserInfo.getQuestions() + "\n" + userInfo.getQuestions());
+			newUserInfo = userInfoService.save(existingUserInfo);
+		}
+		else {
+			newUserInfo = userInfoService.save(userInfo);
+		}
 		if(newUserInfo != null) {
 			mailService.sendMail(mailBuilderService.buildSignupMail(newUserInfo.getMail()));
 			return newUserInfo;

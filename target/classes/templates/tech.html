@@ -25,10 +25,11 @@
 </head>
 
 <body>
+
 	<nav th:replace="fragments/nav.html :: nav"></nav>
 
 	<!-- Header - set the background image for the header in the line below -->
-	<header id="home" class="py-5 bg-image-full" th:style="'background-image: url(/assets/img/green-home-2.jpg);height:95vh'">
+	<header class="py-5 bg-image-full" th:style="'background-image: url(/assets/img/green-home-2.jpg);height:50vh'">
 		<div class="overlay"></div>
 		<div class="container h-100">
 			<div class="d-flex h-100 text-center align-items-center">
@@ -40,11 +41,10 @@
 		</div>
 	</header>
 
-
-	<!-- Content section -->
-	<section id="project" class="pt-5">
+		<!-- Content section -->
+	<section class="py-5">
 		<div class="container"> 
-			<h1 style="display:inline-block">Rouler pour dépolluer !</h1>
+			<h1 style="display:inline-block">Nos travaux</h1>
 			<p class="lead">La fin des moteurs thermiques pollueurs</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 				Aliquid, suscipit, rerum quos facilis repellat architecto commodi
@@ -53,14 +53,40 @@
 		</div>
 	</section>
 
-	<!-- Image Section - set the background image for the header in the line below -->
 	<section class="pt-5">
 		<div class="container">
 			<section>
 				<div class="embed-responsive embed-responsive-16by9">
 					<!--Video source-->
 					<iframe width="560" height="315"
-						src="https://www.youtube.com/embed/GNGMhsPpHOg?rel=0" frameborder="0"
+						src="https://www.youtube.com/embed/Eo-_l6DR4SY?rel=0" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+
+			</section>
+		</div>
+	</section>
+
+	
+	<!-- Content section -->
+	<section class="pt-5">
+		<div class="container"> 
+			<h1 style="display:inline-block">Rouler pour dépolluer !</h1>
+			<p class="lead">La fin des moteurs thermiques pollueurs</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Aliquid, suscipit, rerum quos facilis repellat architecto commodi
+				officia atque nemo facere eum non illo voluptatem quae delectus odit
+				vel itaque amet.</p>
+		</div>
+	</section>
+
+	<section class="pt-5">
+		<div class="container">
+			<section>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/W4H--gs_bBo?rel=0" frameborder="0"
 						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 						allowfullscreen></iframe>
 				</div>
@@ -69,7 +95,7 @@
 	</section>
 
 	<!-- Content section -->
-	<section id="project" class="pt-5">
+	<section class="pt-5">
 		<div class="container"> 
 			<h1 style="display:inline-block">Rouler pour dépolluer !</h1>
 			<p class="lead">La fin des moteurs thermiques pollueurs</p>
@@ -80,21 +106,53 @@
 		</div>
 	</section>
 	
+	
+	<!-- Image Section - set the background image for the header in the line below -->
+	<section class="pt-5">
+		<div class="container">
+			<section>
+			
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/XNxRPO9pXVY?rel=0" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+
+			</section>
+		</div>
+		<!--Carousel Wrapper-->
+	</section>
+	
+		<!-- Content section -->
+	<section id="project" class="pt-5">
+		<div class="container"> 
+			<h1 style="display:inline-block">Rouler pour dépolluer !</h1>
+			   <p th:text="${toto}">Test</p>
+			<p class="lead">La fin des moteurs thermiques pollueurs</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Aliquid, suscipit, rerum quos facilis repellat architecto commodi
+				officia atque nemo facere eum non illo voluptatem quae delectus odit
+				vel itaque amet.</p>
+		</div>
+	</section>
+	
+		<!-- Image Section - set the background image for the header in the line below -->
 	<section class="py-5">
 		<div class="container">
 			<section>
 				<div class="embed-responsive embed-responsive-16by9">
-					<!--Video source-->
 					<iframe width="560" height="315"
-						src="https://www.youtube.com/embed/9qGtgqqDrHQ?rel=0" frameborder="0"
+						src="https://www.youtube.com/embed/ernUcnmTfuA?rel=0" frameborder="0"
 						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 						allowfullscreen></iframe>
 				</div>
 			</section>
 		</div>
+		<!--Carousel Wrapper-->
 	</section>
 	
-	<!-- Footer --> 
+	<!-- Footer -->
 	<footer class="py-5 bg-dark">
 		<div class="container">
 			<p class="m-0 text-center text-white">Copyright &copy;

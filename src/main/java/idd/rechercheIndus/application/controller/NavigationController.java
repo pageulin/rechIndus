@@ -5,10 +5,25 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class IndexController {
+public class NavigationController {
 
 	@GetMapping("/")
 	public String index(Model model) {
 		return "index";
+	}
+	
+	@GetMapping("/aboutus")
+	public String about(Model model) {
+		return "about";
+	}
+	
+	@GetMapping("/tech")
+	public String tech(Model model) {
+		return "tech";
+	}
+	
+	@GetMapping("/contact")
+	public String contact(Model model) {
+		return "contact";
 	}
 }

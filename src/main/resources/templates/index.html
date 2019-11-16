@@ -25,31 +25,7 @@
 </head>
 
 <body>
-
-	<!-- Navigation -->
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-		<div class="container">
-			<a class="navbar-brand" href="#">C.I.A </a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse"
-				data-target="#navbarResponsive" aria-controls="navbarResponsive"
-				aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarResponsive">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item active"><a class="nav-link" href="#home">Home
-							<span class="sr-only">(current)</span>
-					</a></li>
-					<li class="nav-item"><a class="nav-link" href="#project">Le
-							projet</a></li>
-					<li class="nav-item"><a class="nav-link" href="#aboutus">Qui
-							sommes nous ?</a></li>
-					<li class="nav-item"><a class="nav-link" href="#contact">Nous
-							contacter</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+	<nav th:replace="fragments/nav.html :: nav"></nav>
 
 	<!-- Header - set the background image for the header in the line below -->
 	<header id="home" class="py-5 bg-image-full" th:style="'background-image: url(/assets/img/green-home-2.jpg);height:95vh'">
@@ -66,10 +42,9 @@
 
 
 	<!-- Content section -->
-	<section id="project" class="py-5">
+	<section id="project" class="pt-5">
 		<div class="container"> 
 			<h1 style="display:inline-block">Rouler pour dépolluer !</h1>
-			   <p th:text="${toto}">Test</p>
 			<p class="lead">La fin des moteurs thermiques pollueurs</p>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 				Aliquid, suscipit, rerum quos facilis repellat architecto commodi
@@ -79,188 +54,47 @@
 	</section>
 
 	<!-- Image Section - set the background image for the header in the line below -->
-	<section id="aboutus" class="py-5">
+	<section class="pt-5">
 		<div class="container">
-
 			<section>
-				<!--Carousel Wrapper-->
-				<div id="video-carousel-example2"
-					class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
-					<!--Indicators-->
-					<ol class="carousel-indicators">
-						<li data-target="#video-carousel-example2" data-slide-to="0"
-							class="active"></li>
-						<li data-target="#video-carousel-example2" data-slide-to="1"></li>
-						<li data-target="#video-carousel-example2" data-slide-to="2"></li>
-						<li data-target="#video-carousel-example2" data-slide-to="3"></li>
-						<li data-target="#video-carousel-example2" data-slide-to="4"></li>
-					</ol>
-					<!--/.Indicators-->
-					<!--Slides-->
-					<div class="carousel-inner" role="listbox">
-						<!-- First slide -->
-						<div class="carousel-item active">
-
-							<div class="embed-responsive embed-responsive-16by9">
-								<!--Video source-->
-								<iframe width="560" height="315"
-									src="https://www.youtube.com/embed/9qGtgqqDrHQ" frameborder="0"
-									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-									allowfullscreen></iframe>
-							</div>
-							<!--Caption-->
-							<div class="carousel-caption">
-								<div class="animated fadeInDown">
-									<h3 class="h3-responsive">Description</h3>
-								</div>
-							</div>
-							<!--Caption-->
-						</div>
-						<!-- /.First slide -->
-
-						<!-- Second slide -->
-						<div class="carousel-item">
-							<!--Mask color-->
-
-							<div class="embed-responsive embed-responsive-16by9">
-								<iframe width="560" height="315"
-									src="https://www.youtube.com/embed/W4H--gs_bBo" frameborder="0"
-									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-									allowfullscreen></iframe>
-							</div>
-
-
-							<!--Caption-->
-							<div class="carousel-caption">
-								<div class="animated fadeInDown">
-									<h3 class="h3-responsive">Description</h3>
-								</div>
-							</div>
-							<!--Caption-->
-						</div>
-						<!-- /.Second slide -->
-
-						<!-- Third slide -->
-						<div class="carousel-item">
-							<!--Mask color-->
-							<div class="embed-responsive embed-responsive-16by9">
-								<!--Video source-->
-								<iframe width="560" height="315"
-									src="https://www.youtube.com/embed/Eo-_l6DR4SY" frameborder="0"
-									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-									allowfullscreen></iframe>
-							</div>
-
-							<!--Caption-->
-							<div class="carousel-caption">
-								<div class="animated fadeInDown">
-									<h3 class="h3-responsive">Description</h3>
-								</div>
-							</div>
-							<!--Caption-->
-						</div>
-						<!-- /.Third slide -->
-							<!-- Second slide -->
-						<div class="carousel-item">
-							<!--Mask color-->
-
-							<div class="embed-responsive embed-responsive-16by9">
-								<iframe width="560" height="315"
-									src="https://www.youtube.com/embed/XNxRPO9pXVY" frameborder="0"
-									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-									allowfullscreen></iframe>
-							</div>
-
-
-							<!--Caption-->
-							<div class="carousel-caption">
-								<div class="animated fadeInDown">
-									<h3 class="h3-responsive">Description</h3>
-								</div>
-							</div>
-							<!--Caption-->
-						</div>
-						
-							<!-- Second slide -->
-						<div class="carousel-item">
-							<!--Mask color-->
-
-							<div class="embed-responsive embed-responsive-16by9">
-								<iframe width="560" height="315"
-									src="https://www.youtube.com/embed/ernUcnmTfuA" frameborder="0"
-									allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-									allowfullscreen></iframe>
-							</div>
-
-
-							<!--Caption-->
-							<div class="carousel-caption">
-								<div class="animated fadeInDown">
-									<h3 class="h3-responsive">Description</h3>
-								</div>
-							</div>
-							<!--Caption-->
-						</div>
-					</div>
-					<!--/.Slides-->
-					<!--Controls-->
-					<a class="carousel-control-prev" href="#video-carousel-example2"
-						role="button" data-slide="prev"> <span
-						class="carousel-control-prev-icon" aria-hidden="true"></span> <span
-						class="sr-only">Previous</span>
-					</a> <a class="carousel-control-next" href="#video-carousel-example2"
-						role="button" data-slide="next"> <span
-						class="carousel-control-next-icon" aria-hidden="true"></span> <span
-						class="sr-only">Next</span>
-					</a>
-					<!--/.Controls-->
+				<div class="embed-responsive embed-responsive-16by9">
+					<!--Video source-->
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/GNGMhsPpHOg?rel=0" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
 				</div>
 			</section>
 		</div>
-		<!--Carousel Wrapper-->
 	</section>
 
 	<!-- Content section -->
-	<section id="contact" class="py-5">
-
-		<div class="container">
-			<h1>Contactez-nous !</h1>
-			<p class="lead">Pour en savoir plus sur cette expérience, vous
-				pouvez nous contacter par le formulaire ci-après</p>
-			<form id="contactForm">
-				<div class="form-group">
-					<label for="inputEmail">Email address</label> <input type="email"
-						class="form-control" id="inputEmail" aria-describedby="emailHelp"
-						placeholder="Votre adresse mail" name="mail"> <small
-						id="emailHelp" class="form-text text-muted">Nous ne
-						communiquerons votre adresse email à personne.</small>
-				</div>
-
-				<div class="form-group">
-					<label for="inputCompany">Entreprise</label> <input type="text"
-						class="form-control" id="inputCompany"
-						aria-describedby="helpCompany" placeholder="Votre Entreprise"
-						name="company"> <small id="helpCompany"
-						class="form-text text-muted">Indiquez votre entreprise si
-						vous souhaitez demander des renseignements en son nom.</small>
-				</div>
-
-				<div class="form-group">
-					<label for="inputQuestions">Vos interrogations ?</label>
-					<textarea class="form-control" id="inputQuestions" rows="3"
-						aria-describedby="inputQuestionsHelp"
-						placeholder="N'hésitez pas à poser vos questions ou à faire part de vos remarques... "
-						name="questions" required> </textarea>
-					<small id="inputQuestionsHelp" class="form-text text-muted">Dites
-						nous ce que vous souhaitez savoir.</small>
-				</div>
-		<button type="submit" class="btn btn-primary">Ok</button>
-			</form>
-
+	<section id="project" class="pt-5">
+		<div class="container"> 
+			<h1 style="display:inline-block">Rouler pour dépolluer !</h1>
+			<p class="lead">La fin des moteurs thermiques pollueurs</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Aliquid, suscipit, rerum quos facilis repellat architecto commodi
+				officia atque nemo facere eum non illo voluptatem quae delectus odit
+				vel itaque amet.</p>
 		</div>
 	</section>
-
-	<!-- Footer -->
+	
+	<section class="py-5">
+		<div class="container">
+			<section>
+				<div class="embed-responsive embed-responsive-16by9">
+					<!--Video source-->
+					<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/9qGtgqqDrHQ?rel=0" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</section>
+		</div>
+	</section>
+	
+	<!-- Footer --> 
 	<footer class="py-5 bg-dark">
 		<div class="container">
 			<p class="m-0 text-center text-white">Copyright &copy;

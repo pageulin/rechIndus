@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<title>C.I.A</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/vendor/bootstrap/mdbootstrap.min.css}" />
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" type="text/css"
+	th:href="@{/assets/css/styles.css}" />
+<!-- Bootstrap core JavaScript -->
+<script th:src="@{/assets/js/vendor/jquery/jquery.min.js}"></script>
+<script th:src="@{/assets/js/vendor/bootstrap/bootstrap.bundle.min.js}"></script>
+<script th:src="@{/assets/js/scripts.js}"></script>
+</head>
+
+<body>
+	<nav th:replace="fragments/nav.html :: nav"></nav>
+
+	<!-- Header - set the background image for the header in the line below -->
+	<header id="home" class="py-5 bg-image-full" th:style="'background-image: url(/assets/img/green-home-2.jpg);height:95vh'">
+		<div class="overlay"></div>
+		<div class="container h-100">
+			<div class="d-flex h-100 text-center align-items-center">
+				<div class="w-100 text-white">
+					<h1 class="display-3">C.I.A</h1>
+					<p class="lead mb-0">Préparons demain dès aujourd'hui !</p>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- Content section -->
+	<section id="project" class="py-5">
+		<div class="container"> 
+			<h1 style="display:inline-block">Rouler pour dépolluer !</h1>
+			<p class="lead">La fin des moteurs thermiques pollueurs</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+				Aliquid, suscipit, rerum quos facilis repellat architecto commodi
+				officia atque nemo facere eum non illo voluptatem quae delectus odit
+				vel itaque amet.</p>
+		</div>
+	</section>
+
+	
+	<!-- Content section -->
+	<section id="contact" class="py-5">
+		<div class="container">
+			<h1>Contactez-nous !</h1>
+			<p class="lead">Pour en savoir plus sur cette expérience, vous
+				pouvez nous contacter par le formulaire ci-après</p>
+			<form id="contactForm">
+				<div class="form-group">
+					<label for="inputEmail">Email address</label> <input type="email"
+						class="form-control" id="inputEmail" aria-describedby="emailHelp"
+						placeholder="Votre adresse mail" name="mail"> <small
+						id="emailHelp" class="form-text text-muted">Nous ne
+						communiquerons votre adresse email à personne.</small>
+				</div>
+
+				<div class="form-group">
+					<label for="inputCompany">Entreprise</label> <input type="text"
+						class="form-control" id="inputCompany"
+						aria-describedby="helpCompany" placeholder="Votre Entreprise"
+						name="company"> <small id="helpCompany"
+						class="form-text text-muted">Indiquez votre entreprise si
+						vous souhaitez demander des renseignements en son nom.</small>
+				</div>
+
+				<div class="form-group">
+					<label for="inputQuestions">Vos interrogations ?</label>
+					<textarea class="form-control" id="inputQuestions" rows="3"
+						aria-describedby="inputQuestionsHelp"
+						placeholder="N'hésitez pas à poser vos questions ou à faire part de vos remarques... "
+						name="questions" required> </textarea>
+					<small id="inputQuestionsHelp" class="form-text text-muted">Dites
+						nous ce que vous souhaitez savoir.</small>
+				</div>
+				<button type="submit" class="btn btn-primary">Ok</button>
+			</form>
+		</div>
+	</section>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="confirmContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Demande transmise</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        Nous avons bien reçu votre demande, nous vous recontacterons dès que possible pour répondre à vos questions.
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="errorContact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Echec de la demande</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	       <div class="alert alert-block alert-danger">
+                    <h4>Erreur !</h4>
+                   	La transmission de votre demande de contact a échoué, Veuillez réssayer ultérieurement.
+                </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="py-5 bg-dark">
+		<div class="container">
+			<p class="m-0 text-center text-white">Copyright &copy;
+				CIA 2019</p>
+		</div>
+		<!-- /.container -->
+	</footer>
+
+</body>
+
+</html>

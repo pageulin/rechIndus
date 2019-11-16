@@ -17,9 +17,9 @@ public class NavigationController {
 		return "about";
 	}
 	
-	@GetMapping("/tech")
-	public String tech(Model model) {
-		return "tech";
+	@GetMapping("/work")
+	public String work(Model model) {
+		return "work";
 	}
 	
 	@GetMapping("/contact")

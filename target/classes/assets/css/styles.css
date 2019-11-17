@@ -66,3 +66,21 @@ header .overlay {
 	height:80px;
 	width: 80px;
 }
+
+@media (min-width: 768px) {
+	.div-pres {
+		display: table;
+	}
+	.img-pres {
+		display: table-cell;
+	}
+	.text-img-pres {
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+.pres {
+	margin-top: 20px;
+	padding: 0px 20px;
+}

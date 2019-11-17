@@ -73,6 +73,7 @@ header .overlay {
 	}
 	.img-pres {
 		display: table-cell;
+		width: 33%;
 	}
 	.text-img-pres {
 		display: table-cell;
